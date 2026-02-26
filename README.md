@@ -79,8 +79,7 @@ pip install -r requirements.txt
 streamlit run app.py
 
 Then open:
-
-http://localhost:8501
+https://house-prediction-gdkenzpbhlzssyrgcqcmvw.streamlit.app/
 🎯 Conclusion
 
 This project demonstrates end-to-end Machine Learning workflow including:
