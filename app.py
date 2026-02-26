@@ -94,5 +94,6 @@ if st.button("Predict Price"):
         "BHK": bhk
     }])
 
-    prediction = model.predict(input_df)
-    st.success(f"Estimated Price: ₹ {prediction[0]:.2f} Lakhs")
+prediction = model.predict(input_df)
+predicted_price = max(prediction[0], 5.0)  # prevent negative values
+st.success(f"Estimated Price: ₹ {predicted_price:.2f} Lakhs")
