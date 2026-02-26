@@ -93,7 +93,9 @@ if st.button("Predict Price"):
         "balcony": balcony,
         "BHK": bhk
     }])
+    prediction = model.predict(input_df)        # indent with 4 spaces
+    predicted_price = max(prediction[0], 5.0)   # indent with 4 spaces
+    st.success(f"Estimated Price: ₹ {predicted_price:.2f} Lakhs")  # indent with 4 spaces
 
-prediction = model.predict(input_df)
-predicted_price = max(prediction[0], 5.0)  # prevent negative values
-st.success(f"Estimated Price: ₹ {predicted_price:.2f} Lakhs")
+
+
